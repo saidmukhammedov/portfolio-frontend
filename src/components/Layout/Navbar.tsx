@@ -54,7 +54,6 @@ export default function Navbar() {
             {t("nav_contact")}
           </a>
 
-          {/* Dark Mode Toggle */}
           <button
             onClick={() => setDarkMode(!darkMode)}
             className="p-2 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300"
@@ -62,7 +61,6 @@ export default function Navbar() {
             {darkMode ? <Sun size={18} /> : <Moon size={18} />}
           </button>
 
-          {/* Language Selector */}
           <select
             onChange={(e) => i18n.changeLanguage(e.target.value)}
             value={i18n.language}

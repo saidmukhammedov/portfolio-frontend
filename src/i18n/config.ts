@@ -37,7 +37,7 @@ i18n
           nav_contact: "Contact",
           about_title: "Akbarali Saidmukhammedov",
           about_desc:
-            "I am a Full Stack developer building modern, fast, and scalable web applications. Currently, I specialize in crafting complete digital ecosystems using JavaScript, Node.js, Express, React, and MongoDB.",
+            "I am a developer specializing in building backend systems with Node.js, Express, and MongoDB, while also working with React and TypeScript on the frontend. My primary focus in projects is clean architecture, data security, and efficient client-server integration.",
           add_project: "Add New Project",
           project_title: "Project Title",
           project_desc: "Project Description",
