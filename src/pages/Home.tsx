@@ -6,7 +6,6 @@ import { Github, Linkedin, Send, Download } from "lucide-react";
 export default function Home() {
   const { t } = useTranslation();
 
-  // Contact form state
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -16,7 +15,6 @@ export default function Home() {
     e.preventDefault();
     if (!name || !email || !message) return;
 
-    // Xabarni simulyatsiya qilish yoki konsolga chiqarish
     console.log("Xabar yuborildi:", { name, email, message });
 
     setIsSent(true);
@@ -37,7 +35,6 @@ export default function Home() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8 space-y-16">
-      {/* ABOUT SECTION (Rasm va Shaxsiy ma'lumotlar + Tarmoqlar + CV) */}
       <section id="about" className="pt-8">
         <div className="flex flex-col md:flex-row items-center gap-10 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md border border-gray-100 dark:border-gray-700 transition-colors">
           <div className="w-48 h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-blue-500 shadow-lg flex-shrink-0">
@@ -58,7 +55,6 @@ export default function Home() {
               {t("about_desc")}
             </p>
 
-            {/* IJTIMOIY TARMOQLAR VA CV TUGMASI */}
             <div className="pt-4 flex flex-wrap justify-center md:justify-start items-center gap-4">
               <a
                 href="https://github.com/saidmukhammedov"
@@ -85,7 +81,6 @@ export default function Home() {
                 <Send size={18} /> Telegram
               </a>
 
-              {/* DOWNLOAD CV TUGMASI */}
               <a
                 href="../public/cv.pdf"
                 download="CV Akbarali Saidmukhammedov.pdf"
@@ -98,7 +93,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SKILLS SECTION */}
       <section id="skills" className="space-y-6">
         <h2 className="text-3xl font-bold border-b-2 border-blue-500 pb-2 w-max">
           {t("nav_skills")}
@@ -121,7 +115,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROJECTS SECTION */}
       <section id="projects" className="space-y-6">
         <h2 className="text-3xl font-bold border-b-2 border-blue-500 pb-2 w-max">
           {t("nav_projects")}
@@ -129,7 +122,6 @@ export default function Home() {
         <ProjectList />
       </section>
 
-      {/* CONTACT SECTION (To'liq ishlaydigan aloqa shakli) */}
       <section id="contact" className="space-y-6">
         <h2 className="text-3xl font-bold border-b-2 border-blue-500 pb-2 w-max">
           {t("nav_contact")}

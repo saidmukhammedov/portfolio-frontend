@@ -3,11 +3,8 @@ import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
 i18n
-  // Brauzer tilini aniqlash va eslab qolish uchun plagin
   .use(LanguageDetector)
-  // i18n modulini react-i18next bilan bog'lash
   .use(initReactI18next)
-  // i18next sozlamalari
   .init({
     resources: {
       uz: {
@@ -55,15 +52,15 @@ i18n
         },
       },
     },
-    fallbackLng: "uz", // Agar til aniqlanmasa, default til
-    debug: false, // Konsolda ortiqcha loglar chiqmasligi uchun false
+    fallbackLng: "uz",
+    debug: false,
 
     interpolation: {
-      escapeValue: false, // React XSS'dan avtomat himoya qilgani uchun false
+      escapeValue: false,
     },
     detection: {
-      order: ["localStorage", "navigator"], // Avval localStorage'dan qidiradi
-      caches: ["localStorage"], // Tanlangan tilni saqlab qo'yadi
+      order: ["localStorage", "navigator"],
+      caches: ["localStorage"],
     },
   });
 
